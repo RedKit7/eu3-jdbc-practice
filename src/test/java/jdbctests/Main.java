@@ -25,9 +25,12 @@ public class Main {
 //
 //        //getting information with column name
 //        System.out.println(resultSet.getString("region_name"));
+
+
 //        //getting information with column index (starts from 1)
 //        System.out.println(resultSet.getString(2));
 //
+
 //        System.out.println(resultSet.getInt(1)+" - "+resultSet.getString("region_name"));
 //
 //        //move pointer to second row
