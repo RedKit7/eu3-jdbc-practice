@@ -21,6 +21,8 @@ public class SpartanTestWithJsonPath {
     public void beforeclass(){
         baseURI= ConfigurationReader.get("spartan_api_url");
     }
+
+
      /*
           Given accept type is json
           And path param spartan id is 11
@@ -41,9 +43,10 @@ public class SpartanTestWithJsonPath {
                 .when().get("/api/spartans/{id}");
 
         assertEquals(response.statusCode(),200);
+
         assertEquals(response.contentType(),"application/json");  //;charset=UTF-8
 
-        //verify id and name with path()
+        //verify id and name with path() method
         int id = response.path("id");
         String name = response.path("name");
 

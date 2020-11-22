@@ -19,7 +19,7 @@ public class SpartanTestWithParameters {
 
     @BeforeClass
     public void beforeclass() {
-        baseURI = "http://3.82.200.157:8000";
+        baseURI = "http://18.207.207.16:8000";
     }
 
 
@@ -42,7 +42,7 @@ public class SpartanTestWithParameters {
 
         assertEquals(response.statusCode(),200);
 
-        assertEquals(response.contentType(),"application/json;charset=UTF-8");
+        assertEquals(response.contentType(),"application/json");
 
         assertTrue(response.body().asString().contains("Blythe"));
     }
@@ -67,9 +67,9 @@ public class SpartanTestWithParameters {
 
         assertEquals(response.statusCode(),404);
 
-        assertEquals(response.contentType(),"application/json;charset=UTF-8");
+        assertEquals(response.contentType(),"application/json");
 
-        assertTrue(response.body().asString().contains("Spartan Not Found"));
+        assertTrue(response.body().asString().contains("Not Found"));
 
     }
 
@@ -95,7 +95,7 @@ public class SpartanTestWithParameters {
         //verify status code
         assertEquals(response.statusCode(),200);
         //verify content-type
-        assertEquals(response.contentType(),"application/json;charset=UTF-8");
+        assertEquals(response.contentType(),"application/json");
         //verify Female in the response
         assertTrue(response.body().asString().contains("Female"));
         //verify Janette in the response
@@ -117,12 +117,14 @@ public class SpartanTestWithParameters {
                 .and().queryParams(queryMap)
                 .when().get("/api/spartans/search");
 
+
+
         //response verification
 
         //verify status code
         assertEquals(response.statusCode(),200);
         //verify content-type
-        assertEquals(response.contentType(),"application/json;charset=UTF-8");
+        assertEquals(response.contentType(),"application/json");
         //verify Female in the response
         assertTrue(response.body().asString().contains("Female"));
         //verify Janette in the response

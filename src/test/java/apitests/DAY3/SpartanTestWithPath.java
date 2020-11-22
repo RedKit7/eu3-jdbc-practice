@@ -38,11 +38,14 @@ public class SpartanTestWithPath {
                 .and().pathParam("id", 10)
                 .when().get("/api/spartans/{id}");
 
+
         assertEquals(response.statusCode(),200);
+
         assertEquals(response.contentType(),"application/json;charset=UTF-8");
 
         //response.prettyPrint();
         //printing each key value in the json body/payload
+
         System.out.println(response.path("id").toString());
         System.out.println(response.path("name").toString());
         System.out.println(response.body().path("gender").toString());
@@ -76,9 +79,14 @@ public class SpartanTestWithPath {
         Response response = given().accept(ContentType.JSON)
                 .when().get("/api/spartans");
 
+
+        //verify status
         assertEquals(response.statusCode(),200);
+
+
         //verify content type
         assertEquals(response.getHeader("Content-Type"),"application/json;charset=UTF-8");
+
 
         int firstId = response.path("id[0]");
         System.out.println("firstId = " + firstId);
@@ -86,11 +94,12 @@ public class SpartanTestWithPath {
         String firstName = response.path("name[0]");
         System.out.println("firstName = " + firstName);
 
-        String lastFirstName = response.path("name[-2]");
+        String lastFirstName = response.path("name[-1]");
         System.out.println("lastFirstName = " + lastFirstName);
 
         int lastId = response.path("id[-1]");
         System.out.println("lastId = " + lastId);
+
 
         //print all names of spartans
         List<String> names = response.path("name");
