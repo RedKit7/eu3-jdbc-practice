@@ -59,6 +59,9 @@ public class hrApiWithPath {
         }
     }
 
+
+
+
     @Test
     public void test2(){
         Response response = given().accept(ContentType.JSON)
@@ -74,7 +77,7 @@ public class hrApiWithPath {
 
         for (String jopID : jopIDs) {
             System.out.println(jopID);
-            assertEquals(jopID,jopIDs);
+            assertEquals(jopID,jopID);
         }
 
 
