@@ -39,7 +39,7 @@ Australia,China,India,Japan,Malaysia,Singapore
 
 
     @Test
-    public void getCountriesWithPath() {
+    public void Q3() {
         Response response = given().accept(ContentType.JSON)
                 .and().queryParam("q", "{\"region_id\":3}")
                 .when().get("/countries");

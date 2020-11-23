@@ -41,7 +41,7 @@ And sorted is false
 
 
     @Test
-    public void testQ1Spartan() {
+    public void testQ2Spartan() {
 
         Response response = given().accept(ContentType.JSON)
                 .and().queryParam("gender", "Female")

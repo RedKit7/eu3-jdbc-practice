@@ -39,7 +39,7 @@ Q2:
 
 
     @Test
-    public void getCountriesWithPath(){
+    public void Q2(){
         Response response = given().accept(ContentType.JSON)
                 .and().queryParam("q", "{\"department_id\":80}")
                 .when().get("/employees");

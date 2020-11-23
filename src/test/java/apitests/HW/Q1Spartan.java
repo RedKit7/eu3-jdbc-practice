@@ -52,7 +52,13 @@ public class Q1Spartan {
         System.out.println("response.statusCode() = " + response.statusCode());
         System.out.println("response.contentType() = " + response.contentType());
 
+
+        //  If we want to verify existince of any header :
         System.out.println("response.headers().hasHeaderWithName(\"Date\") = " + response.headers().hasHeaderWithName("Date"));
+
+
+        //   if you want to get any header value : -response.header("yourHearderName")
+        System.out.println("response.header(\"Transfer-Encoding\") = " + response.header("Transfer-Encoding"));
 
 
 
@@ -60,10 +66,10 @@ public class Q1Spartan {
         assertEquals(response.contentType(),"application/json");
 
 
+
         assertTrue(response.headers().hasHeaderWithName("Date"));
 
-
-
+        assertEquals(response.header("Transfer-Encoding"),"chunked");
 
 
         //response.prettyPrint();
