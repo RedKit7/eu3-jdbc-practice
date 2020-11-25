@@ -8,7 +8,7 @@ public class jdbc_example {
 
 
 
-    String dbUrl = "jdbc:oracle:thin:@3.82.200.157:1521:xe";
+    String dbUrl = "jdbc:oracle:thin:@18.207.207.16:1521:xe";
     String dbUsername = "hr";
     String dbPassword = "hr";
 
@@ -35,6 +35,7 @@ public class jdbc_example {
 
         //we need to move before first row to get full list since we are at the last row right now
         resultSet.beforeFirst();
+
 
         while (resultSet.next()){
             System.out.println(resultSet.getString(2));
