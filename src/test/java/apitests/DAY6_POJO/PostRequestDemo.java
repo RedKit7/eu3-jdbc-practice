@@ -100,8 +100,10 @@ public class PostRequestDemo {
                 .contentType(ContentType.JSON)
                 .and()
                 .body(requestMap)
+
                 .when()
                 .post("/api/spartans")
+
                 .then().log().all()
                 .statusCode(201)
                 .and()
