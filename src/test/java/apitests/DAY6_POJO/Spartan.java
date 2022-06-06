@@ -10,6 +10,7 @@ package apitests.DAY6_POJO;
     }
  */
 
+//https://www.jsonschema2pojo.org/
 
 public class Spartan {
 

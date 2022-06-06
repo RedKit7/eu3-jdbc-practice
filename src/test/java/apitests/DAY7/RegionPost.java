@@ -1,9 +1,9 @@
-package apitests.DAY6_POJO;
-
-
-import com.google.gson.annotations.SerializedName;
+package apitests.DAY7;
 
 public class RegionPost {
+
+
+
 
     private int region_id;
     private String region_name;

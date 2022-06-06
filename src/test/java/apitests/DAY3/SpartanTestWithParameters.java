@@ -31,7 +31,7 @@ public class SpartanTestWithParameters {
           When user sends GET request to /api/spartans/{id}
           Then response status code should be 200
           And response content-type: application/json;charset=UTF-8
-          And "Blythe" should be in response payload
+          And "Blythe" should be in response payload (payload==body)
        */
 
     @Test

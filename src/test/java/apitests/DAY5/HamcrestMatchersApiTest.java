@@ -31,12 +31,13 @@ public class HamcrestMatchersApiTest {
                 when().get("http://54.165.32.99:8000/api/spartans/{id}")
                 .then().statusCode(200)
                 .and().assertThat().contentType(equalTo("application/json"))
-                .and().assertThat().body("id",equalTo(15),
+                .and().assertThat().body(
+                        "id",equalTo(15),
                 "name",equalTo("Meta"),
                         "gender",equalTo("Female"),
                         "phone",equalTo(1938695106));
 
-       // Matchers.
+       // Matchers is very strong library for assertion (comes with RestAssured library. )
 
     }
 

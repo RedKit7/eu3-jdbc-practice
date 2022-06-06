@@ -24,7 +24,7 @@ public class Pojo_deserialize {
         //JSON to Our Spartan class object
 
         Spartan spartan15 = response.body().as(Spartan.class); // if you have added the gson , jackson library to your poom.xml this "as" method
-        // will convert your result to an Spartan object
+        // will convert your result to a Spartan object
 
         System.out.println(spartan15);
 
