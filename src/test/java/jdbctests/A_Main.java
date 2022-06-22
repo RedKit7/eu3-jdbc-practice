@@ -1,7 +1,7 @@
 package jdbctests;
 
 import java.sql.*;
-public class Main {
+public class A_Main {
 
 
     public static void main(String[] args) throws SQLException {

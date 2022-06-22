@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class dynamic_list {
+public class D_dynamic_list_ONEMLI {
 
     String dbUrl = "jdbc:oracle:thin:@18.207.207.16:1521:xe";
     String dbUsername = "hr";

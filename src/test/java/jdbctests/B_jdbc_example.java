@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import java.sql.*;
 
-public class jdbc_example {
+public class B_jdbc_example {
 
 
 
@@ -73,7 +73,7 @@ public class jdbc_example {
         //get the row count
         int rowCount = resultSet.getRow();
         System.out.println(rowCount);
-        //we need move before first row to get full list since we are at he last row right now.
+        //we need move before first row to get full list since we are at the last row right now.
         resultSet.beforeFirst();
 
         while(resultSet.next()){
@@ -130,6 +130,7 @@ public class jdbc_example {
             System.out.println(rsMetadata.getColumnName(i));
 
         }
+
 
 
 
